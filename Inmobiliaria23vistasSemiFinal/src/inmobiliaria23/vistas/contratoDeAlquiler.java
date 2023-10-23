@@ -92,7 +92,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextIdContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextIdContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextIdContratoAlq.setText(" ");
-        jTextIdContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextIdContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextIdContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         jTextIdContratoAlq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +109,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextIDInmuebleContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextIDInmuebleContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextIDInmuebleContratoAlq.setText(" ");
-        jTextIDInmuebleContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextIDInmuebleContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextIDInmuebleContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextIDInmuebleContratoAlq);
 
@@ -121,7 +121,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextIDInquilinoContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextIDInquilinoContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextIDInquilinoContratoAlq.setText(" ");
-        jTextIDInquilinoContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextIDInquilinoContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextIDInquilinoContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextIDInquilinoContratoAlq);
 
@@ -219,7 +219,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextMontoPesosContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextMontoPesosContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextMontoPesosContratoAlq.setText(" ");
-        jTextMontoPesosContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextMontoPesosContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextMontoPesosContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos1.add(jTextMontoPesosContratoAlq);
 
@@ -231,7 +231,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextFechaIniContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextFechaIniContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextFechaIniContratoAlq.setText(" ");
-        jTextFechaIniContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextFechaIniContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextFechaIniContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos1.add(jTextFechaIniContratoAlq);
 
@@ -243,7 +243,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextFechaFinContratoAlq.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextFechaFinContratoAlq.setForeground(new java.awt.Color(51, 51, 51));
         jTextFechaFinContratoAlq.setText(" ");
-        jTextFechaFinContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextFechaFinContratoAlq.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextFechaFinContratoAlq.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos1.add(jTextFechaFinContratoAlq);
 
@@ -255,7 +255,7 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
         jTextTelefonosPro3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTelefonosPro3.setForeground(new java.awt.Color(51, 51, 51));
         jTextTelefonosPro3.setText(" ");
-        jTextTelefonosPro3.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.darkGray, null));
+        jTextTelefonosPro3.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTelefonosPro3.setPreferredSize(new java.awt.Dimension(30, 30));
         DatosInquilinos1.add(jTextTelefonosPro3);
 

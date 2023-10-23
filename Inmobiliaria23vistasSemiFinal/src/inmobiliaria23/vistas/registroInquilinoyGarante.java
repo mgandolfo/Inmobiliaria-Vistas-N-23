@@ -50,6 +50,8 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jPanelDatosGarante = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaGarantes = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jbtnAñadir = new inmobiliaria23.entidades.BotonNegro();
         jbModificar = new inmobiliaria23.entidades.BotonNegro();
@@ -58,6 +60,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jbEliminar = new inmobiliaria23.entidades.BotonRojo();
         botonVerde1 = new inmobiliaria23.entidades.BotonVerde();
         botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
+        botonNegro1 = new inmobiliaria23.entidades.BotonNegro();
 
         jTextID.setBackground(new java.awt.Color(236, 226, 200));
         jTextID.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
@@ -91,7 +94,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextId.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextId.setForeground(new java.awt.Color(51, 51, 51));
         jTextId.setText(" ");
-        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextId.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextId);
 
@@ -103,7 +106,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextDni.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextDni.setForeground(new java.awt.Color(51, 51, 51));
         jTextDni.setText(" ");
-        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextDni.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextDni);
 
@@ -115,7 +118,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextCuit.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextCuit.setForeground(new java.awt.Color(51, 51, 51));
         jTextCuit.setText(" ");
-        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextCuit.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextCuit);
 
@@ -127,7 +130,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextNombreApellido.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextNombreApellido.setForeground(new java.awt.Color(51, 51, 51));
         jTextNombreApellido.setText(" ");
-        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextNombreApellido.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextNombreApellido);
 
@@ -139,7 +142,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextLugarTrabajo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextLugarTrabajo.setForeground(new java.awt.Color(51, 51, 51));
         jTextLugarTrabajo.setText(" ");
-        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextLugarTrabajo.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextLugarTrabajo);
 
@@ -151,7 +154,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextTlefonos.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos.setText(" ");
-        jTextTlefonos.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextTlefonos.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTlefonos.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextTlefonos);
 
@@ -168,9 +171,6 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, -1, -1));
 
         jPanelDatosGarante.setOpaque(false);
-        java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 1, 1);
-        flowLayout1.setAlignOnBaseline(true);
-        jPanelDatosGarante.setLayout(flowLayout1);
 
         jTextAreaGarantes.setBackground(new java.awt.Color(236, 226, 200));
         jTextAreaGarantes.setColumns(45);
@@ -179,9 +179,41 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextAreaGarantes.setLineWrap(true);
         jTextAreaGarantes.setRows(30);
         jTextAreaGarantes.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextAreaGarantes.setPreferredSize(new java.awt.Dimension(499, 300));
         jScrollPane1.setViewportView(jTextAreaGarantes);
 
-        jPanelDatosGarante.add(jScrollPane1);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanelDatosGaranteLayout = new javax.swing.GroupLayout(jPanelDatosGarante);
+        jPanelDatosGarante.setLayout(jPanelDatosGaranteLayout);
+        jPanelDatosGaranteLayout.setHorizontalGroup(
+            jPanelDatosGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDatosGaranteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelDatosGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)))
+        );
+        jPanelDatosGaranteLayout.setVerticalGroup(
+            jPanelDatosGaranteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDatosGaranteLayout.createSequentialGroup()
+                .addGap(1, 1, 1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(212, Short.MAX_VALUE))
+        );
 
         getContentPane().add(jPanelDatosGarante, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 510, 390));
 
@@ -264,6 +296,13 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         });
         getContentPane().add(botonAzul1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
 
+        botonNegro1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNegro1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botonNegro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -296,11 +335,16 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextAreaGarantes.setText("");
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
+    private void botonNegro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNegro1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonNegro1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DatosInquilinos;
     private javax.swing.JLabel Titulo;
     private inmobiliaria23.entidades.BotonAzul botonAzul1;
+    private inmobiliaria23.entidades.BotonNegro botonNegro1;
     private inmobiliaria23.entidades.BotonVerde botonVerde1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -313,6 +357,8 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelDatosGarante;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextAreaGarantes;
     private javax.swing.JTextField jTextCuit;
     private javax.swing.JTextField jTextDni;

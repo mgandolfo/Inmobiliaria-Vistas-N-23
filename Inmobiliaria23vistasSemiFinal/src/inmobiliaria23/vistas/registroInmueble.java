@@ -1,14 +1,29 @@
 package inmobiliaria23.vistas;
 
+import inmobiliaria23.accesoaDatos.conexion;
 import inmobiliaria23.entidades.InternaljFrameImagen;
 import inmobiliaria23.entidades.panelesImagenes;
+import java.awt.Color;
 import java.awt.Image;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Administrador
  */
 public class registroInmueble extends InternaljFrameImagen {
+
+    private FileInputStream fis;
+    private int longitudBytes;
 
     private panelesImagenes pi = new panelesImagenes();
 
@@ -50,7 +65,6 @@ public class registroInmueble extends InternaljFrameImagen {
         jbLimpiar = new inmobiliaria23.entidades.BotonNegro();
         jbEliminar = new inmobiliaria23.entidades.BotonRojo();
         botonVerde1 = new inmobiliaria23.entidades.BotonVerde();
-        botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jTextTlefonos3 = new javax.swing.JTextField();
@@ -61,8 +75,13 @@ public class registroInmueble extends InternaljFrameImagen {
         jLabel10 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
+        jLabel_foto = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         NombrePropietario = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        txt_nombre = new javax.swing.JTextField();
+        botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
 
         jTextID.setBackground(new java.awt.Color(236, 226, 200));
         jTextID.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
@@ -96,7 +115,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextId.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextId.setForeground(new java.awt.Color(51, 51, 51));
         jTextId.setText(" ");
-        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextId.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextId);
 
@@ -108,7 +127,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextDni.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextDni.setForeground(new java.awt.Color(51, 51, 51));
         jTextDni.setText(" ");
-        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextDni.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextDni);
 
@@ -120,7 +139,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextCuit.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextCuit.setForeground(new java.awt.Color(51, 51, 51));
         jTextCuit.setText(" ");
-        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextCuit.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextCuit);
 
@@ -132,7 +151,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextNombreApellido.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextNombreApellido.setForeground(new java.awt.Color(51, 51, 51));
         jTextNombreApellido.setText(" ");
-        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextNombreApellido.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextNombreApellido);
 
@@ -144,7 +163,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextLugarTrabajo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextLugarTrabajo.setForeground(new java.awt.Color(51, 51, 51));
         jTextLugarTrabajo.setText(" ");
-        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextLugarTrabajo.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextLugarTrabajo);
 
@@ -213,21 +232,14 @@ public class registroInmueble extends InternaljFrameImagen {
         botonVerde1.setText("GUARDAR");
         botonVerde1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         botonVerde1.setPreferredSize(new java.awt.Dimension(120, 30));
+        botonVerde1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVerde1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(botonVerde1);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 1000, 50));
-
-        botonAzul1.setBorder(null);
-        botonAzul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/exits.png"))); // NOI18N
-        botonAzul1.setText(" SALIR");
-        botonAzul1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        botonAzul1.setPreferredSize(new java.awt.Dimension(120, 30));
-        botonAzul1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAzul1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(botonAzul1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 560, -1, -1));
 
         jPanel2.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
         jPanel2.setOpaque(false);
@@ -241,7 +253,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos3.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos3.setText(" ");
-        jTextTlefonos3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextTlefonos3.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTlefonos3.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos3);
 
@@ -253,7 +265,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos6.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos6.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos6.setText(" ");
-        jTextTlefonos6.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextTlefonos6.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTlefonos6.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos6);
 
@@ -265,7 +277,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos7.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos7.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos7.setText(" ");
-        jTextTlefonos7.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
+        jTextTlefonos7.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTlefonos7.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos7);
 
@@ -279,21 +291,61 @@ public class registroInmueble extends InternaljFrameImagen {
         jComboBox1.setPreferredSize(new java.awt.Dimension(100, 35));
         jPanel2.add(jComboBox1);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 210, 290));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 200, 290));
 
         jPanel3.setBackground(new java.awt.Color(236, 226, 200));
         jPanel3.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
-        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_foto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/foto.jpg"))); // NOI18N
+        jLabel_foto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel_foto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_fotoMouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel_foto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
+
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 460, 360));
 
         jLabel11.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel11.setText("Imagen Inmueble:");
+        jLabel11.setText("Imagen Inmueble: (Click en el cuadro para agregar Foto )");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
 
         NombrePropietario.setFont(new java.awt.Font("Roboto Cn", 1, 12)); // NOI18N
         NombrePropietario.setForeground(new java.awt.Color(0, 0, 0));
         NombrePropietario.setText("Del propietario de: Fulano de tal");
         getContentPane().add(NombrePropietario, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
+
+        jPanel4.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
+        jPanel4.setOpaque(false);
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
+
+        jLabel13.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
+        jLabel13.setText("Nombre imgagen:");
+        jPanel4.add(jLabel13);
+
+        txt_nombre.setBackground(new java.awt.Color(236, 226, 200));
+        txt_nombre.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        txt_nombre.setForeground(new java.awt.Color(51, 51, 51));
+        txt_nombre.setText(" ");
+        txt_nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
+        txt_nombre.setPreferredSize(new java.awt.Dimension(200, 30));
+        jPanel4.add(txt_nombre);
+
+        botonAzul1.setBorder(null);
+        botonAzul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/exits.png"))); // NOI18N
+        botonAzul1.setText(" SALIR");
+        botonAzul1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        botonAzul1.setPreferredSize(new java.awt.Dimension(120, 30));
+        botonAzul1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAzul1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(botonAzul1);
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 570, 490, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -303,7 +355,7 @@ public class registroInmueble extends InternaljFrameImagen {
     }//GEN-LAST:event_jbtnAñadirActionPerformed
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed
-       
+
 
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
@@ -321,8 +373,35 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextCuit.setText("");
         jTextNombreApellido.setText("");
         jTextLugarTrabajo.setText("");
-        
+
     }//GEN-LAST:event_jbLimpiar1ActionPerformed
+
+    private void jLabel_fotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_fotoMouseClicked
+        JFileChooser se = new JFileChooser();
+        se.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        int estado = se.showOpenDialog(null);
+        if (estado == JFileChooser.APPROVE_OPTION) {
+            try {
+
+                fis = new FileInputStream(se.getSelectedFile());
+                this.longitudBytes = (int) se.getSelectedFile().length();
+                Image icono = ImageIO.read(se.getSelectedFile()).getScaledInstance(jLabel_foto.getWidth(), jLabel_foto.getHeight(), Image.SCALE_DEFAULT);
+                jLabel_foto.setIcon(new ImageIcon(icono));
+                jLabel_foto.updateUI();
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                System.out.println("Error en el primer catch");
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("Error en el segundo catch");
+            }
+        }
+    }//GEN-LAST:event_jLabel_fotoMouseClicked
+
+    private void botonVerde1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerde1ActionPerformed
+        GuardarImagen();
+    }//GEN-LAST:event_botonVerde1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -335,6 +414,7 @@ public class registroInmueble extends InternaljFrameImagen {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -342,9 +422,11 @@ public class registroInmueble extends InternaljFrameImagen {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_foto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jTextCuit;
     private javax.swing.JTextField jTextDni;
     private javax.swing.JTextField jTextID;
@@ -359,5 +441,52 @@ public class registroInmueble extends InternaljFrameImagen {
     private inmobiliaria23.entidades.BotonNegro jbLimpiar1;
     private inmobiliaria23.entidades.BotonNegro jbModificar;
     private inmobiliaria23.entidades.BotonNegro jbtnAñadir;
+    private javax.swing.JTextField txt_nombre;
     // End of variables declaration//GEN-END:variables
+//Un método para guardar imagen
+
+    //metodo para guardar
+    //metodo para guardar
+    //metodo para guardar
+    public void GuardarImagen() {
+
+        if (txt_nombre.getText().equals(" ")) {
+            txt_nombre.setBackground(Color.red);
+            JOptionPane.showMessageDialog(null, "Debes llenar todos los campos");
+        } else {
+
+            String nombre;
+            nombre = txt_nombre.getText().trim();
+
+            try {
+
+                Connection cn = conexion.conectar();
+                PreparedStatement pst = cn.prepareStatement("INSERT INTO imagenes (id_foto,nombre,foto) values (?,?,?)");
+
+                pst.setInt(1, 0);
+                pst.setString(2, nombre);
+                pst.setBlob(3, fis, longitudBytes);
+
+                pst.executeUpdate();
+                cn.close();
+                Limpiar();
+                txt_nombre.setBackground(Color.green);
+                jLabel_foto.setText("foto");
+                mensajeCorrecto msCorrecto = new mensajeCorrecto(null, true);
+                msCorrecto.setVisible(true);
+
+            } catch (SQLException e) {
+                System.out.println("Error al guardar foto " + e.getMessage());
+                JOptionPane.showMessageDialog(null, "¡¡Error al guardar foto!!");
+            }
+
+        }
+    }
+
+    //metodo Limpiar
+    public void Limpiar() {
+        txt_nombre.setText("");
+        jLabel_foto.setText("foto");
+    }
+
 }

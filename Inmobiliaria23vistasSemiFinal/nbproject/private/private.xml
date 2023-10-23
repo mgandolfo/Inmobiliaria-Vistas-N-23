@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Inmobiliaria23vistasNACHO/src/inmobiliaria23/vistas/mensajeAdvertencia.java</file>
-            <file>file:/F:/Inmobiliaria23vistasNACHO/src/inmobiliaria23/vistas/mensajeOKyCancel.java</file>
-            <file>file:/F:/Inmobiliaria23vistasNACHO/src/inmobiliaria23/vistas/mensajeBuscar.java</file>
+            <file>file:/E:/GitHub/Inmobiliaria23vistasSemiFinal/src/inmobiliaria23/vistas/registroPropietario.java</file>
+            <file>file:/E:/GitHub/Inmobiliaria23vistasSemiFinal/src/inmobiliaria23/entidades/BotonNegro.java</file>
+            <file>file:/E:/GitHub/Inmobiliaria23vistasSemiFinal/src/inmobiliaria23/entidades/BotonMaximizar.java</file>
+            <file>file:/E:/GitHub/Inmobiliaria23vistasSemiFinal/src/inmobiliaria23/vistas/registroInmueble.java</file>
+            <file>file:/E:/GitHub/Inmobiliaria23vistasSemiFinal/src/inmobiliaria23/vistas/buscadorInmuebles.java</file>
         </group>
     </open-files>
 </project-private>

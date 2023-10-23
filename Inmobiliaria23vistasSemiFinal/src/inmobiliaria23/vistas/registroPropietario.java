@@ -104,7 +104,7 @@ public class registroPropietario extends InternaljFrameImagen {
         jTextIdPro.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextIdPro.setForeground(new java.awt.Color(51, 51, 51));
         jTextIdPro.setText(" ");
-        jTextIdPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextIdPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextIdPro.setPreferredSize(new java.awt.Dimension(165, 30));
         jTextIdPro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +121,7 @@ public class registroPropietario extends InternaljFrameImagen {
         jTextDniPro.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextDniPro.setForeground(new java.awt.Color(51, 51, 51));
         jTextDniPro.setText(" ");
-        jTextDniPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextDniPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextDniPro.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextDniPro);
 
@@ -133,7 +133,7 @@ public class registroPropietario extends InternaljFrameImagen {
         jTextCuitPro.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextCuitPro.setForeground(new java.awt.Color(51, 51, 51));
         jTextCuitPro.setText(" ");
-        jTextCuitPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextCuitPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextCuitPro.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextCuitPro);
 
@@ -145,7 +145,7 @@ public class registroPropietario extends InternaljFrameImagen {
         jTextNombreApellidoPro.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextNombreApellidoPro.setForeground(new java.awt.Color(51, 51, 51));
         jTextNombreApellidoPro.setText(" ");
-        jTextNombreApellidoPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextNombreApellidoPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextNombreApellidoPro.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextNombreApellidoPro);
 
@@ -157,7 +157,7 @@ public class registroPropietario extends InternaljFrameImagen {
         jTextTelefonosPro.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTelefonosPro.setForeground(new java.awt.Color(51, 51, 51));
         jTextTelefonosPro.setText(" ");
-        jTextTelefonosPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
+        jTextTelefonosPro.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         jTextTelefonosPro.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextTelefonosPro);
 

@@ -40,6 +40,7 @@ public class BotonNegro extends JButton {
         Graphics2D g2 = (Graphics2D) grphcs.create();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Color colores;
+        //this.setSize(30, 30);
 
         if (mouseSobreElBoton) {
             colores = Color.decode("#000000"); // Cambia el color cuando el mouse está sobre el botón
