@@ -96,7 +96,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextId.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextId.setForeground(new java.awt.Color(51, 51, 51));
         jTextId.setText(" ");
-        jTextId.setBorder(null);
+        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextId.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextId);
 
@@ -108,7 +108,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextDni.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextDni.setForeground(new java.awt.Color(51, 51, 51));
         jTextDni.setText(" ");
-        jTextDni.setBorder(null);
+        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextDni.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextDni);
 
@@ -120,7 +120,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextCuit.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextCuit.setForeground(new java.awt.Color(51, 51, 51));
         jTextCuit.setText(" ");
-        jTextCuit.setBorder(null);
+        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextCuit.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextCuit);
 
@@ -132,7 +132,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextNombreApellido.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextNombreApellido.setForeground(new java.awt.Color(51, 51, 51));
         jTextNombreApellido.setText(" ");
-        jTextNombreApellido.setBorder(null);
+        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextNombreApellido.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextNombreApellido);
 
@@ -144,7 +144,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextLugarTrabajo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextLugarTrabajo.setForeground(new java.awt.Color(51, 51, 51));
         jTextLugarTrabajo.setText(" ");
-        jTextLugarTrabajo.setBorder(null);
+        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextLugarTrabajo.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextLugarTrabajo);
 
@@ -241,7 +241,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos3.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos3.setText(" ");
-        jTextTlefonos3.setBorder(null);
+        jTextTlefonos3.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextTlefonos3.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos3);
 
@@ -253,7 +253,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos6.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos6.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos6.setText(" ");
-        jTextTlefonos6.setBorder(null);
+        jTextTlefonos6.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextTlefonos6.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos6);
 
@@ -265,7 +265,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jTextTlefonos7.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos7.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos7.setText(" ");
-        jTextTlefonos7.setBorder(null);
+        jTextTlefonos7.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, null, java.awt.Color.darkGray));
         jTextTlefonos7.setPreferredSize(new java.awt.Dimension(165, 30));
         jPanel2.add(jTextTlefonos7);
 

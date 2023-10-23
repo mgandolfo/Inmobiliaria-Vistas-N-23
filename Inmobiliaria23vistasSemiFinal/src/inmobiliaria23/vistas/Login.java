@@ -42,6 +42,7 @@ public class Login extends javax.swing.JFrame {
         jCheckMostrar = new javax.swing.JCheckBox();
         citybg2 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
+        botonRojo1 = new inmobiliaria23.entidades.BotonRojo();
         botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
         botonRojo2 = new inmobiliaria23.entidades.BotonRojo();
 
@@ -112,15 +113,26 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        botonRojo1.setFont(new java.awt.Font("Roboto Bk", 1, 14)); // NOI18N
+        botonRojo1.setLabel("X");
+        botonRojo1.setPreferredSize(new java.awt.Dimension(40, 40));
+        botonRojo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRojo1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
         headerLayout.setHorizontalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addComponent(botonRojo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addComponent(botonRojo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         botonAzul1.setBorder(null);
@@ -291,6 +303,10 @@ public class Login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botonAzul1ActionPerformed
 
+    private void botonRojo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRojo1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_botonRojo1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -329,6 +345,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private inmobiliaria23.entidades.BotonAzul botonAzul1;
+    private inmobiliaria23.entidades.BotonRojo botonRojo1;
     private inmobiliaria23.entidades.BotonRojo botonRojo2;
     private javax.swing.JLabel citybg2;
     private javax.swing.JLabel favicon;
