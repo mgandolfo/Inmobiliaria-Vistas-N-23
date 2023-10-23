@@ -16,7 +16,7 @@ public class registroInmueble extends InternaljFrameImagen {
         initComponents();
         this.setSize(1024, 770);
 
-        this.setImage("/inmobiliaria23/recursos/FondoNaranja.jpg");
+        this.setImage("/inmobiliaria23/recursos/fondoMadera.jpg");
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
     }

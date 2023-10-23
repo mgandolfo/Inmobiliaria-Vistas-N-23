@@ -53,7 +53,7 @@ public class RegistrarInmueble extends javax.swing.JFrame {
 
         jPanel1.add(TituloyNombrePropietario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 110));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/FondoFinalINTERNA_Inmueble.jpg"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/fondoMadera.jpg"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

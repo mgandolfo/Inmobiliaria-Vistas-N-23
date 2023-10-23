@@ -15,7 +15,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
     public registroInquilinoyGarante() {
         initComponents();
         this.setSize(1024, 768);
-        this.setImage("/inmobiliaria23/recursos/FondoNaranja.jpg");
+        this.setImage("/inmobiliaria23/recursos/fondoMadera.jpg");
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
     }
@@ -91,7 +91,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextId.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextId.setForeground(new java.awt.Color(51, 51, 51));
         jTextId.setText(" ");
-        jTextId.setBorder(null);
+        jTextId.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextId.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextId);
 
@@ -103,7 +103,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextDni.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextDni.setForeground(new java.awt.Color(51, 51, 51));
         jTextDni.setText(" ");
-        jTextDni.setBorder(null);
+        jTextDni.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextDni.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextDni);
 
@@ -115,7 +115,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextCuit.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextCuit.setForeground(new java.awt.Color(51, 51, 51));
         jTextCuit.setText(" ");
-        jTextCuit.setBorder(null);
+        jTextCuit.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextCuit.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextCuit);
 
@@ -127,7 +127,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextNombreApellido.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextNombreApellido.setForeground(new java.awt.Color(51, 51, 51));
         jTextNombreApellido.setText(" ");
-        jTextNombreApellido.setBorder(null);
+        jTextNombreApellido.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextNombreApellido.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextNombreApellido);
 
@@ -139,7 +139,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextLugarTrabajo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextLugarTrabajo.setForeground(new java.awt.Color(51, 51, 51));
         jTextLugarTrabajo.setText(" ");
-        jTextLugarTrabajo.setBorder(null);
+        jTextLugarTrabajo.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextLugarTrabajo.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextLugarTrabajo);
 
@@ -151,7 +151,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextTlefonos.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         jTextTlefonos.setForeground(new java.awt.Color(51, 51, 51));
         jTextTlefonos.setText(" ");
-        jTextTlefonos.setBorder(null);
+        jTextTlefonos.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jTextTlefonos.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos.add(jTextTlefonos);
 
@@ -178,7 +178,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
         jTextAreaGarantes.setForeground(new java.awt.Color(51, 51, 51));
         jTextAreaGarantes.setLineWrap(true);
         jTextAreaGarantes.setRows(30);
-        jTextAreaGarantes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(236, 226, 200)));
+        jTextAreaGarantes.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, java.awt.Color.darkGray, java.awt.Color.darkGray));
         jScrollPane1.setViewportView(jTextAreaGarantes);
 
         jPanelDatosGarante.add(jScrollPane1);
@@ -262,7 +262,7 @@ public class registroInquilinoyGarante extends InternaljFrameImagen {
                 botonAzul1ActionPerformed(evt);
             }
         });
-        getContentPane().add(botonAzul1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 590, -1, -1));
+        getContentPane().add(botonAzul1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 610, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
