@@ -5,9 +5,7 @@
  */
 package inmobiliaria23.vistas;
 
-import inmobiliaria23.entidades.TituloMensajes;
-import inmobiliaria23.entidades.panelesImagenes;
-import java.awt.Color;
+
 
 /**
  *

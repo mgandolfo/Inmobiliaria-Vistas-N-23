@@ -321,8 +321,13 @@ public class registroInmueble extends InternaljFrameImagen {
         jPanel4.setOpaque(false);
 
         BtNGuardarImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/cámara-20.png"))); // NOI18N
-        BtNGuardarImagen.setText(" GUARDAR FOTO");
+        BtNGuardarImagen.setText(" LIMPIAR");
         BtNGuardarImagen.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        BtNGuardarImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtNGuardarImagenActionPerformed(evt);
+            }
+        });
         jPanel4.add(BtNGuardarImagen);
         jPanel4.add(txt_nombre);
 
@@ -395,6 +400,10 @@ public class registroInmueble extends InternaljFrameImagen {
     private void BTNGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNGuardarActionPerformed
         GuardarImagen();
     }//GEN-LAST:event_BTNGuardarActionPerformed
+
+    private void BtNGuardarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtNGuardarImagenActionPerformed
+       Limpiar();
+    }//GEN-LAST:event_BtNGuardarImagenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -478,8 +487,10 @@ public class registroInmueble extends InternaljFrameImagen {
 
     //metodo Limpiar
     public void Limpiar() {
-        txt_nombre.setText("");
-        jLabel_foto.setText("foto");
+        txt_nombre.setText(" ");
+        String foto = "foto.jpg";
+        jLabel_foto.setIcon(jLabel_foto.getDisabledIcon());
+        
     }
 
 }

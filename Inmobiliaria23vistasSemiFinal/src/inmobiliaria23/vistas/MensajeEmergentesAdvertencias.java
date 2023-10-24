@@ -5,7 +5,7 @@
  */
 package inmobiliaria23.vistas;
 
-import inmobiliaria23.entidades.TituloMensajes;
+
 import inmobiliaria23.entidades.panelesImagenes;
 import java.awt.Color;
 
@@ -16,13 +16,14 @@ import java.awt.Color;
 public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
     
     
-    
+    int  xMouse, yMouse;
 
     public MensajeEmergentesAdvertencias(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
          this.setLocationRelativeTo(parent);  
-        this.setSize(400, 240);
+        this.setSize(400, 286);
+        
     
     }
     
@@ -36,9 +37,12 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         botonRojo1 = new inmobiliaria23.entidades.BotonRojo();
         MensajeEmergente = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        botonRojo2 = new inmobiliaria23.entidades.BotonRojo();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setUndecorated(true);
 
         jPanel1.setOpaque(false);
@@ -78,14 +82,14 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(133, 133, 133)
+                .addContainerGap(133, Short.MAX_VALUE)
                 .addComponent(botonRojo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(botonRojo1, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
@@ -102,6 +106,44 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
             }
         });
 
+        header.setBackground(new java.awt.Color(0, 0, 0));
+        header.setOpaque(false);
+        header.setPreferredSize(new java.awt.Dimension(250, 40));
+        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                headerMouseDragged(evt);
+            }
+        });
+        header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                headerMousePressed(evt);
+            }
+        });
+
+        botonRojo2.setText("X");
+        botonRojo2.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
+        botonRojo2.setPreferredSize(new java.awt.Dimension(40, 40));
+        botonRojo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRojo2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addComponent(botonRojo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(botonRojo2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,14 +155,16 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(MensajeEmergente))
                 .addContainerGap())
+            .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
-                .addComponent(MensajeEmergente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(MensajeEmergente, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
                 .addGap(5, 5, 5)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -137,6 +181,21 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
     private void MensajeEmergenteAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_MensajeEmergenteAncestorAdded
             
     }//GEN-LAST:event_MensajeEmergenteAncestorAdded
+
+    private void botonRojo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRojo2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_botonRojo2ActionPerformed
+
+    private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_headerMouseDragged
+
+    private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_headerMousePressed
 
     /**
      * @param args the command line arguments
@@ -184,6 +243,8 @@ public class MensajeEmergentesAdvertencias extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel MensajeEmergente;
     private inmobiliaria23.entidades.BotonRojo botonRojo1;
+    private inmobiliaria23.entidades.BotonRojo botonRojo2;
+    private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

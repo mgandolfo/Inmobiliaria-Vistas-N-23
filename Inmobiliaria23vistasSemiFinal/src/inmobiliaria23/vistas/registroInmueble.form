@@ -624,11 +624,14 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/inmobiliaria23/recursos/c&#xe1;mara-20.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value=" GUARDAR FOTO"/>
+            <Property name="text" type="java.lang.String" value=" LIMPIAR"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Cn" size="14" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtNGuardarImagenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="txt_nombre">
         </Component>

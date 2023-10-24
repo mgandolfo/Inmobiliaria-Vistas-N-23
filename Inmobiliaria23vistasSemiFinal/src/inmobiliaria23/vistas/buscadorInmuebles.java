@@ -276,6 +276,7 @@ public class buscadorInmuebles extends InternaljFrameImagen {
 
         
         mensajeBuscador msBuscar = new mensajeBuscador(null, true);
+        msBuscar.setLocationRelativeTo(pi);
         msBuscar.BuscarPorTipo(title);
 
         if (TxtTipo.getText() == "casa" || TxtTipo.getText() == "Casa") {

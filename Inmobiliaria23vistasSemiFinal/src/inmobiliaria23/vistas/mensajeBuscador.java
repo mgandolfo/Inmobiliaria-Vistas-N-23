@@ -13,13 +13,13 @@ import java.awt.Color;
  * @author mgandolfo
  */
 public class mensajeBuscador extends javax.swing.JDialog {
-    
+
     int xMouse, yMouse;
-    
+
     public mensajeBuscador(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+
         this.setLocationRelativeTo(parent);
         this.setSize(400, 289);
     }
@@ -241,9 +241,9 @@ public class mensajeBuscador extends javax.swing.JDialog {
     private javax.swing.JTextField jTxt_Buscador;
     // End of variables declaration//GEN-END:variables
 public void BuscarPorTipo(String Tipo) {
-        
+
         jTxt_Buscador.setText(Tipo);
-        
+
     }
-    
+
 }
