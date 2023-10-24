@@ -16,16 +16,16 @@ import javax.swing.JLabel;
  * @author mgandolfo
  */
 public class Login extends javax.swing.JFrame {
-    
+
     int xMouse, yMouse;
-    
+
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setSize(846, 550);
-        
+
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -284,21 +284,23 @@ public class Login extends javax.swing.JFrame {
     private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
         String Usuario = "admin";
         String Password = "admin";
-        
+
         String convertirPass = String.valueOf(passTxt.getPassword());
         if (userTxt.getText().equals(Usuario) && convertirPass.equals(Password)) {
-            
+
             MenuView principal = new MenuView();
             principal.setUsuarios(userTxt.getText());
             principal.setVisible(true);
             dispose();
-            
+
         } else {
-            mensajeAdvertencia me = new mensajeAdvertencia(this, true);
+            String mensaje = "Usuario y contraseña incorrecta";
+            MensajeEmergentesAdvertencias me = new MensajeEmergentesAdvertencias(this, true);
+            me.TextoMensaje(mensaje);
             me.setVisible(true);
             userTxt.setText("");
             passTxt.setText("");
-            
+
         }
 
     }//GEN-LAST:event_botonAzul1ActionPerformed

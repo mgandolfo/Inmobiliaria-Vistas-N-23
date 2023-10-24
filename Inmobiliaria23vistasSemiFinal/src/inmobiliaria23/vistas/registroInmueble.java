@@ -64,7 +64,7 @@ public class registroInmueble extends InternaljFrameImagen {
         jbLimpiar1 = new inmobiliaria23.entidades.BotonNegro();
         jbLimpiar = new inmobiliaria23.entidades.BotonNegro();
         jbEliminar = new inmobiliaria23.entidades.BotonRojo();
-        botonVerde1 = new inmobiliaria23.entidades.BotonVerde();
+        BTNGuardar = new inmobiliaria23.entidades.BotonVerde();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jTextTlefonos3 = new javax.swing.JTextField();
@@ -79,9 +79,9 @@ public class registroInmueble extends InternaljFrameImagen {
         jLabel11 = new javax.swing.JLabel();
         NombrePropietario = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        txt_nombre = new javax.swing.JTextField();
-        botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
+        BtNGuardarImagen = new inmobiliaria23.entidades.BotonVerde();
+        txt_nombre = new javax.swing.JLabel();
+        BTNSalir = new inmobiliaria23.entidades.BotonAzul();
 
         jTextID.setBackground(new java.awt.Color(236, 226, 200));
         jTextID.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
@@ -227,17 +227,17 @@ public class registroInmueble extends InternaljFrameImagen {
         });
         jPanel1.add(jbEliminar);
 
-        botonVerde1.setBorder(null);
-        botonVerde1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/guardar.png"))); // NOI18N
-        botonVerde1.setText("GUARDAR");
-        botonVerde1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        botonVerde1.setPreferredSize(new java.awt.Dimension(120, 30));
-        botonVerde1.addActionListener(new java.awt.event.ActionListener() {
+        BTNGuardar.setBorder(null);
+        BTNGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/guardar.png"))); // NOI18N
+        BTNGuardar.setText("GUARDAR");
+        BTNGuardar.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        BTNGuardar.setPreferredSize(new java.awt.Dimension(120, 30));
+        BTNGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVerde1ActionPerformed(evt);
+                BTNGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonVerde1);
+        jPanel1.add(BTNGuardar);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 1000, 50));
 
@@ -319,33 +319,26 @@ public class registroInmueble extends InternaljFrameImagen {
 
         jPanel4.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
         jPanel4.setOpaque(false);
-        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 10, 10));
 
-        jLabel13.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel13.setText("Nombre imgagen:");
-        jPanel4.add(jLabel13);
-
-        txt_nombre.setBackground(new java.awt.Color(236, 226, 200));
-        txt_nombre.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_nombre.setForeground(new java.awt.Color(51, 51, 51));
-        txt_nombre.setText(" ");
-        txt_nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_nombre.setPreferredSize(new java.awt.Dimension(200, 30));
+        BtNGuardarImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/cámara-20.png"))); // NOI18N
+        BtNGuardarImagen.setText(" GUARDAR FOTO");
+        BtNGuardarImagen.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        jPanel4.add(BtNGuardarImagen);
         jPanel4.add(txt_nombre);
 
-        botonAzul1.setBorder(null);
-        botonAzul1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/exits.png"))); // NOI18N
-        botonAzul1.setText(" SALIR");
-        botonAzul1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        botonAzul1.setPreferredSize(new java.awt.Dimension(120, 30));
-        botonAzul1.addActionListener(new java.awt.event.ActionListener() {
+        BTNSalir.setBorder(null);
+        BTNSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/exits.png"))); // NOI18N
+        BTNSalir.setText(" SALIR");
+        BTNSalir.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
+        BTNSalir.setPreferredSize(new java.awt.Dimension(120, 30));
+        BTNSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAzul1ActionPerformed(evt);
+                BTNSalirActionPerformed(evt);
             }
         });
-        jPanel4.add(botonAzul1);
+        jPanel4.add(BTNSalir);
 
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 570, 490, 50));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 460, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -359,9 +352,9 @@ public class registroInmueble extends InternaljFrameImagen {
 
     }//GEN-LAST:event_jbLimpiarActionPerformed
 
-    private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
+    private void BTNSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalirActionPerformed
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_botonAzul1ActionPerformed
+    }//GEN-LAST:event_BTNSalirActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
 
@@ -399,22 +392,22 @@ public class registroInmueble extends InternaljFrameImagen {
         }
     }//GEN-LAST:event_jLabel_fotoMouseClicked
 
-    private void botonVerde1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerde1ActionPerformed
+    private void BTNGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNGuardarActionPerformed
         GuardarImagen();
-    }//GEN-LAST:event_botonVerde1ActionPerformed
+    }//GEN-LAST:event_BTNGuardarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private inmobiliaria23.entidades.BotonVerde BTNGuardar;
+    private inmobiliaria23.entidades.BotonAzul BTNSalir;
+    private inmobiliaria23.entidades.BotonVerde BtNGuardarImagen;
     private javax.swing.JPanel DatosInquilinos;
     private javax.swing.JLabel NombrePropietario;
     private javax.swing.JLabel Titulo;
-    private inmobiliaria23.entidades.BotonAzul botonAzul1;
-    private inmobiliaria23.entidades.BotonVerde botonVerde1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -441,7 +434,7 @@ public class registroInmueble extends InternaljFrameImagen {
     private inmobiliaria23.entidades.BotonNegro jbLimpiar1;
     private inmobiliaria23.entidades.BotonNegro jbModificar;
     private inmobiliaria23.entidades.BotonNegro jbtnAñadir;
-    private javax.swing.JTextField txt_nombre;
+    private javax.swing.JLabel txt_nombre;
     // End of variables declaration//GEN-END:variables
 //Un método para guardar imagen
 
