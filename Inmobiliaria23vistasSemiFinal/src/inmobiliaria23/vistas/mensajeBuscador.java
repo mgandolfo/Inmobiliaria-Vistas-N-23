@@ -15,6 +15,7 @@ import java.awt.Color;
 public class mensajeBuscador extends javax.swing.JDialog {
 
     int xMouse, yMouse;
+    private buscadorInmuebles bsinmueble = new buscadorInmuebles();
 
     public mensajeBuscador(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -160,7 +161,8 @@ public class mensajeBuscador extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
-        // TODO add your handling code here:
+        
+        BuscarPorTipo("Casa");
     }//GEN-LAST:event_botonAzul1ActionPerformed
 
     private void botonRojo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRojo1ActionPerformed
@@ -241,8 +243,14 @@ public class mensajeBuscador extends javax.swing.JDialog {
     private javax.swing.JTextField jTxt_Buscador;
     // End of variables declaration//GEN-END:variables
 public void BuscarPorTipo(String Tipo) {
+    
+    
 
         jTxt_Buscador.setText(Tipo);
+        
+        String texto = bsinmueble.getTitle();
+        
+        
 
     }
 

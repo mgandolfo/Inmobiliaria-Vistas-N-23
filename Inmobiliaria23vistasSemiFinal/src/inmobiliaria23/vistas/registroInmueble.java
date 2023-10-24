@@ -402,7 +402,7 @@ public class registroInmueble extends InternaljFrameImagen {
     }//GEN-LAST:event_BTNGuardarActionPerformed
 
     private void BtNGuardarImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtNGuardarImagenActionPerformed
-       Limpiar();
+        Limpiar();
     }//GEN-LAST:event_BtNGuardarImagenActionPerformed
 
 
@@ -488,9 +488,8 @@ public class registroInmueble extends InternaljFrameImagen {
     //metodo Limpiar
     public void Limpiar() {
         txt_nombre.setText(" ");
-        String foto = "foto.jpg";
-        jLabel_foto.setIcon(jLabel_foto.getDisabledIcon());
-        
+        String foto = "/inmobiliaria23/recursos/foto.jpg";
+
     }
 
 }

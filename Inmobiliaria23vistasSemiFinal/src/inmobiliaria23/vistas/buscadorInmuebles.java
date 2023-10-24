@@ -254,7 +254,6 @@ public class buscadorInmuebles extends InternaljFrameImagen {
         TxtTipo.setBackground(new java.awt.Color(236, 226, 200));
         TxtTipo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
         TxtTipo.setForeground(new java.awt.Color(51, 51, 51));
-        TxtTipo.setText(" ");
         TxtTipo.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
         TxtTipo.setPreferredSize(new java.awt.Dimension(165, 30));
         DatosInquilinos3.add(TxtTipo);
@@ -276,11 +275,12 @@ public class buscadorInmuebles extends InternaljFrameImagen {
 
         
         mensajeBuscador msBuscar = new mensajeBuscador(null, true);
-        msBuscar.setLocationRelativeTo(pi);
-        msBuscar.BuscarPorTipo(title);
+        //String text = msBuscar.getName();
+        msBuscar.BuscarPorTipo("Buscar");
+        msBuscar.setVisible(true);
 
-        if (TxtTipo.getText() == "casa" || TxtTipo.getText() == "Casa") {
-            msBuscar.setVisible(true);
+        if (msBuscar.getTitle() == "casa") {
+            TxtTipo.getText();
 
         } else {
             String mensaje = "No existe el TIPO";
