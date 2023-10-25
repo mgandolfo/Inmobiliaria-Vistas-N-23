@@ -33,31 +33,25 @@ public class buscadorInmuebles extends InternaljFrameImagen {
 
         jTextID = new javax.swing.JTextField();
         Titulo = new javax.swing.JLabel();
-        DatosInquilinos = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        txt_id_Inmueble = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txt_Local_Inmueble = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         btnBuscarInmuebles = new inmobiliaria23.entidades.BotonVerde();
         botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
-        DatosInquilinos1 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        txt_Zona_Inmueble = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        txt_Otros_Inmueble = new javax.swing.JTextField();
-        DatosInquilinos2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        txt_Superficie_Inmueble = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        txt_Valor_Inmueble = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         ListadInmuebles = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableListadoInmuebles = new javax.swing.JTable();
-        DatosInquilinos3 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        TxtTipo = new javax.swing.JTextField();
+        Combos = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBoxTipo = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBoxTipo1 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBoxTipo2 = new javax.swing.JComboBox<>();
+        Combos1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jComboBoxTipo8 = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        jComboBoxTipo9 = new javax.swing.JComboBox<>();
 
         jTextID.setBackground(new java.awt.Color(236, 226, 200));
         jTextID.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
@@ -77,42 +71,6 @@ public class buscadorInmuebles extends InternaljFrameImagen {
         Titulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/seek.png"))); // NOI18N
         Titulo.setText("Buscador de Inmuebles Disponibles");
         getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
-
-        DatosInquilinos.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        DatosInquilinos.setOpaque(false);
-        DatosInquilinos.setPreferredSize(new java.awt.Dimension(500, 390));
-        DatosInquilinos.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel1.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel1.setText("ID:");
-        DatosInquilinos.add(jLabel1);
-
-        txt_id_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_id_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_id_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_id_Inmueble.setText(" ");
-        txt_id_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_id_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        txt_id_Inmueble.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_id_InmuebleActionPerformed(evt);
-            }
-        });
-        DatosInquilinos.add(txt_id_Inmueble);
-
-        jLabel2.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel2.setText("Uso de Local:");
-        DatosInquilinos.add(jLabel2);
-
-        txt_Local_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_Local_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_Local_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_Local_Inmueble.setText(" ");
-        txt_Local_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_Local_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos.add(txt_Local_Inmueble);
-
-        getContentPane().add(DatosInquilinos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 180, 140));
 
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 10, 10));
@@ -142,68 +100,6 @@ public class buscadorInmuebles extends InternaljFrameImagen {
         jPanel1.add(botonAzul1);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 1000, 50));
-
-        DatosInquilinos1.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        DatosInquilinos1.setOpaque(false);
-        DatosInquilinos1.setPreferredSize(new java.awt.Dimension(500, 390));
-        DatosInquilinos1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel12.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel12.setText("Zona:");
-        DatosInquilinos1.add(jLabel12);
-
-        txt_Zona_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_Zona_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_Zona_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_Zona_Inmueble.setText(" ");
-        txt_Zona_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_Zona_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos1.add(txt_Zona_Inmueble);
-
-        jLabel13.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel13.setText("Otros:");
-        DatosInquilinos1.add(jLabel13);
-
-        txt_Otros_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_Otros_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_Otros_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_Otros_Inmueble.setText(" ");
-        txt_Otros_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_Otros_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos1.add(txt_Otros_Inmueble);
-
-        getContentPane().add(DatosInquilinos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 180, 140));
-
-        DatosInquilinos2.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        DatosInquilinos2.setOpaque(false);
-        DatosInquilinos2.setPreferredSize(new java.awt.Dimension(500, 390));
-        DatosInquilinos2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel8.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel8.setText("Superficie Mínima:");
-        DatosInquilinos2.add(jLabel8);
-
-        txt_Superficie_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_Superficie_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_Superficie_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_Superficie_Inmueble.setText(" ");
-        txt_Superficie_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_Superficie_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos2.add(txt_Superficie_Inmueble);
-
-        jLabel11.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel11.setText("Valor Estimado:");
-        DatosInquilinos2.add(jLabel11);
-
-        txt_Valor_Inmueble.setBackground(new java.awt.Color(236, 226, 200));
-        txt_Valor_Inmueble.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        txt_Valor_Inmueble.setForeground(new java.awt.Color(51, 51, 51));
-        txt_Valor_Inmueble.setText(" ");
-        txt_Valor_Inmueble.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        txt_Valor_Inmueble.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos2.add(txt_Valor_Inmueble);
-
-        getContentPane().add(DatosInquilinos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 180, 140));
 
         jLabel14.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
         jLabel14.setText("Listados Inmuebles:");
@@ -242,23 +138,54 @@ public class buscadorInmuebles extends InternaljFrameImagen {
 
         getContentPane().add(ListadInmuebles, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 960, 290));
 
-        DatosInquilinos3.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        DatosInquilinos3.setOpaque(false);
-        DatosInquilinos3.setPreferredSize(new java.awt.Dimension(500, 390));
-        DatosInquilinos3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+        Combos.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true), "Seleccionar los Itemes a buscar", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Roboto Bk", 1, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        Combos.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
+        Combos.setOpaque(false);
+        Combos.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 5));
 
-        jLabel15.setFont(new java.awt.Font("Roboto Cn", 1, 18)); // NOI18N
-        jLabel15.setText("Tipo:");
-        DatosInquilinos3.add(jLabel15);
+        jLabel1.setText("Tipo:");
+        Combos.add(jLabel1);
 
-        TxtTipo.setBackground(new java.awt.Color(236, 226, 200));
-        TxtTipo.setFont(new java.awt.Font("Roboto Cn", 0, 14)); // NOI18N
-        TxtTipo.setForeground(new java.awt.Color(51, 51, 51));
-        TxtTipo.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.darkGray));
-        TxtTipo.setPreferredSize(new java.awt.Dimension(165, 30));
-        DatosInquilinos3.add(TxtTipo);
+        jComboBoxTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipo.setToolTipText("");
+        jComboBoxTipo.setPreferredSize(new java.awt.Dimension(110, 26));
+        Combos.add(jComboBoxTipo);
 
-        getContentPane().add(DatosInquilinos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 190, 80));
+        jLabel2.setText("Zona");
+        Combos.add(jLabel2);
+
+        jComboBoxTipo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipo1.setPreferredSize(new java.awt.Dimension(110, 26));
+        Combos.add(jComboBoxTipo1);
+
+        jLabel3.setText("Superficie:");
+        Combos.add(jLabel3);
+
+        jComboBoxTipo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipo2.setPreferredSize(new java.awt.Dimension(110, 26));
+        Combos.add(jComboBoxTipo2);
+
+        Combos1.setFont(new java.awt.Font("Roboto Cn", 0, 12)); // NOI18N
+        Combos1.setOpaque(false);
+        Combos1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 30, 5));
+
+        jLabel9.setText("Rango Min:");
+        Combos1.add(jLabel9);
+
+        jComboBoxTipo8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipo8.setPreferredSize(new java.awt.Dimension(110, 26));
+        Combos1.add(jComboBoxTipo8);
+
+        jLabel10.setText("Rango Max:");
+        Combos1.add(jLabel10);
+
+        jComboBoxTipo9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTipo9.setPreferredSize(new java.awt.Dimension(110, 26));
+        Combos1.add(jComboBoxTipo9);
+
+        Combos.add(Combos1);
+
+        getContentPane().add(Combos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 940, 100));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -266,10 +193,6 @@ public class buscadorInmuebles extends InternaljFrameImagen {
     private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_botonAzul1ActionPerformed
-
-    private void txt_id_InmuebleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_id_InmuebleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_id_InmuebleActionPerformed
 
     private void btnBuscarInmueblesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarInmueblesActionPerformed
 
@@ -280,7 +203,7 @@ public class buscadorInmuebles extends InternaljFrameImagen {
         msBuscar.setVisible(true);
 
         if (msBuscar.getTitle() == "casa") {
-            TxtTipo.getText();
+            //TxtTipo.getText();
 
         } else {
             String mensaje = "No existe el TIPO";
@@ -294,33 +217,27 @@ public class buscadorInmuebles extends InternaljFrameImagen {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel DatosInquilinos;
-    private javax.swing.JPanel DatosInquilinos1;
-    private javax.swing.JPanel DatosInquilinos2;
-    private javax.swing.JPanel DatosInquilinos3;
+    private javax.swing.JPanel Combos;
+    private javax.swing.JPanel Combos1;
     private javax.swing.JPanel ListadInmuebles;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JTextField TxtTipo;
     private inmobiliaria23.entidades.BotonAzul botonAzul1;
     private inmobiliaria23.entidades.BotonVerde btnBuscarInmuebles;
+    private javax.swing.JComboBox<String> jComboBoxTipo;
+    private javax.swing.JComboBox<String> jComboBoxTipo1;
+    private javax.swing.JComboBox<String> jComboBoxTipo2;
+    private javax.swing.JComboBox<String> jComboBoxTipo8;
+    private javax.swing.JComboBox<String> jComboBoxTipo9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableListadoInmuebles;
     private javax.swing.JTextField jTextID;
-    private javax.swing.JTextField txt_Local_Inmueble;
-    private javax.swing.JTextField txt_Otros_Inmueble;
-    private javax.swing.JTextField txt_Superficie_Inmueble;
-    private javax.swing.JTextField txt_Valor_Inmueble;
-    private javax.swing.JTextField txt_Zona_Inmueble;
-    private javax.swing.JTextField txt_id_Inmueble;
     // End of variables declaration//GEN-END:variables
 
 }

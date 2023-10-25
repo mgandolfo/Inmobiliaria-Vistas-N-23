@@ -161,7 +161,7 @@ public class mensajeBuscador extends javax.swing.JDialog {
 
     private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
 
-        buscadorInmuebles bsInmueble = new buscadorInmuebles();
+        buscadorInmueblesOLD bsInmueble = new buscadorInmueblesOLD();
         bsInmueble.add(this);
 
     }//GEN-LAST:event_botonAzul1ActionPerformed

@@ -9,24 +9,29 @@ import javax.swing.JOptionPane;
 
 public class conexion {
 
-    public String url = "jdbc:mariadb://localhost/";
-    public String bd = "inmobiliariagrupo23";
-    public String user = "mgandolfo"; //o reemplaza con root
-    public String pass = "utunu675ithi."; //o reemplazar con "" vacio
-    public String driver = "org.mariadb.jdbc.Driver";
-    public Connection cn = null;
+    private static final String URL = "jdbc:mariadb://localhost/";
+    private static final String DB = "inmobiliaria2023fin";
+    private static final String USUARIO = "root";
+    private static final String PASSWORD = "";
+    private static Connection connection;
+
+    private conexion() {
+    }
 
     public static Connection conectar() {
-        try {
+        if (connection == null) {
+            try {
+                Class.forName("org.mariadb.jdbc.Driver");
+                connection = DriverManager.getConnection(URL + DB, USUARIO, PASSWORD);
+                //JOptionPane.showMessageDialog(null,"Conectado");
+            } catch (ClassNotFoundException ex) {
+                JOptionPane.showMessageDialog(null, "Error al cargar el driver" + ex.getMessage());
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Error al conectarse a la base de datos" + ex.getMessage());
+            }
 
-            Connection cn = DriverManager.getConnection("jdbc:mariadb://localhost/inmobiliariagrupo23", "mgandolfo", "utunu675ithi.");
-            //System.out.println("Conectado");
-            return cn;
-
-        } catch (SQLException e) {
-            System.out.println("Error en la conexion local " + e);
         }
-        return (null);
+        return connection;
     }
 
 }
