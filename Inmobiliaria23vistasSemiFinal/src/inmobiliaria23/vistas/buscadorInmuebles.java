@@ -276,7 +276,7 @@ public class buscadorInmuebles extends InternaljFrameImagen {
         
         mensajeBuscador msBuscar = new mensajeBuscador(null, true);
         //String text = msBuscar.getName();
-        msBuscar.BuscarPorTipo("Buscar");
+        msBuscar.BuscarPorTipo();
         msBuscar.setVisible(true);
 
         if (msBuscar.getTitle() == "casa") {
