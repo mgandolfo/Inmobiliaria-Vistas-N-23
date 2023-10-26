@@ -278,7 +278,11 @@ public class contratoDeAlquiler extends InternaljFrameImagen {
     }//GEN-LAST:event_jbSalirActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
-
+      mensajeOKyCancel ms = new mensajeOKyCancel(null, true);
+      ms.setVisible(true);
+      
+      //
+      
     }//GEN-LAST:event_jbEliminarActionPerformed
 
     private void jbLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLimpiarActionPerformed

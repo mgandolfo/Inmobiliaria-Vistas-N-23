@@ -39,8 +39,8 @@ public class mensajeOKyCancel extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        botonAzul1 = new inmobiliaria23.entidades.BotonAzul();
-        botonRojo1 = new inmobiliaria23.entidades.BotonRojo();
+        si = new inmobiliaria23.entidades.BotonAzul();
+        no = new inmobiliaria23.entidades.BotonRojo();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -69,30 +69,30 @@ public class mensajeOKyCancel extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        botonAzul1.setText("SI");
-        botonAzul1.setFont(new java.awt.Font("Roboto Bk", 1, 14)); // NOI18N
-        botonAzul1.setPreferredSize(new java.awt.Dimension(120, 30));
-        botonAzul1.addActionListener(new java.awt.event.ActionListener() {
+        si.setText("SI");
+        si.setFont(new java.awt.Font("Roboto Bk", 1, 14)); // NOI18N
+        si.setPreferredSize(new java.awt.Dimension(120, 30));
+        si.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAzul1ActionPerformed(evt);
+                siActionPerformed(evt);
             }
         });
-        jPanel2.add(botonAzul1);
+        jPanel2.add(si);
 
-        botonRojo1.setText("NO");
-        botonRojo1.setFont(new java.awt.Font("Roboto Bk", 1, 14)); // NOI18N
-        botonRojo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        botonRojo1.setPreferredSize(new java.awt.Dimension(120, 30));
-        botonRojo1.addActionListener(new java.awt.event.ActionListener() {
+        no.setText("NO");
+        no.setFont(new java.awt.Font("Roboto Bk", 1, 14)); // NOI18N
+        no.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        no.setPreferredSize(new java.awt.Dimension(120, 30));
+        no.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRojo1ActionPerformed(evt);
+                noActionPerformed(evt);
             }
         });
-        jPanel2.add(botonRojo1);
+        jPanel2.add(no);
 
         jLabel2.setFont(new java.awt.Font("Roboto Bk", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText("¿Estás seguro que deseas salir?");
+        jLabel2.setText("¿Estás seguro que deseas Salir?");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,13 +122,14 @@ public class mensajeOKyCancel extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonRojo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRojo1ActionPerformed
+    private void noActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noActionPerformed
         dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_botonRojo1ActionPerformed
+    }//GEN-LAST:event_noActionPerformed
 
-    private void botonAzul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAzul1ActionPerformed
+    private void siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_botonAzul1ActionPerformed
+        //contratorecindir();
+    }//GEN-LAST:event_siActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,11 +175,11 @@ public class mensajeOKyCancel extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private inmobiliaria23.entidades.BotonAzul botonAzul1;
-    private inmobiliaria23.entidades.BotonRojo botonRojo1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private inmobiliaria23.entidades.BotonRojo no;
+    private inmobiliaria23.entidades.BotonAzul si;
     // End of variables declaration//GEN-END:variables
 }

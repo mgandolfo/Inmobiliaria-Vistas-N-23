@@ -174,7 +174,7 @@ public class PropiedadInmuebleData {
 
     public List<inmobiliaria23.entidades.PropiedadInmueble> listarInmueblesDisponiblesXTipo(String tipoDeLocal) {
         String sql = "SELECT idInmueble, Tipo, Direccion, Zona, Superficie, Caracteristicas,"
-                + " Accesibilidad,precioBase, estado FROM inmueble WHERE estado=1 and Tipo LIKE ?";
+                + " Accesibilidad,precioBase, estado FROM inmueble WHERE estado=1 and Tipo LIKE ? ORDER BY Tipo DESC";
         ArrayList<inmobiliaria23.entidades.PropiedadInmueble> listaInmuebles = new ArrayList<>();
 
         try {
@@ -273,13 +273,14 @@ public class PropiedadInmuebleData {
     //Buscar por ID fin
     //-------------------
     //Buscar por Tipo inicio
-    public List<inmobiliaria23.entidades.PropiedadInmueble> buscarInmueblesPorTipo(String tipo) {
+    //public List<inmobiliaria23.entidades.PropiedadInmueble> buscarInmueblesPorTipo(String tipo) {
+        public List<inmobiliaria23.entidades.PropiedadInmueble> buscarInmueblesPorTipo(int indice) {
         String sql = "SELECT * FROM inmueble WHERE Tipo=?";
         List<inmobiliaria23.entidades.PropiedadInmueble> propiedades = new ArrayList<>();
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, tipo);
+            ps.setInt(1, indice);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 inmobiliaria23.entidades.PropiedadInmueble propiedad = new inmobiliaria23.entidades.PropiedadInmueble();
@@ -312,7 +313,8 @@ public class PropiedadInmuebleData {
     //-------------------
     //Buscar por Zona inicio
     public List<inmobiliaria23.entidades.PropiedadInmueble> buscarInmueblesPorZona(String zona) {
-        String sql = "SELECT * FROM inmueble WHERE Zona=?";
+        String sql = "SELECT idInmueble, Tipo, Direccion, Zona, Superficie, Caracteristicas,"
+                + " Accesibilidad,precioBase, estado FROM inmueble WHERE estado=1 and Tipo LIKE ? ORDER BY Tipo DESC";
         List<inmobiliaria23.entidades.PropiedadInmueble> propiedades = new ArrayList<>();
 
         try {
@@ -388,7 +390,6 @@ public class PropiedadInmuebleData {
     //----------------------------------------------------------------------------------------------------------------------------
     //Listar Precio base inicio
     public List<inmobiliaria23.entidades.PropiedadInmueble> listarInmueblesPorPrecioBaseEnRango(float precioMin, float precioMax) {
-        //String sql = "SELECT * FROM inmueble WHERE PrecioBase BETWEEN ? AND ?, ORDER BY idInmueble ASC";
         String sql = "SELECT * FROM inmueble WHERE PrecioBase BETWEEN ? AND ? ORDER BY PrecioBase ASC";
         List<inmobiliaria23.entidades.PropiedadInmueble> propiedadesEncontradas = new ArrayList<>();
 
@@ -419,6 +420,41 @@ public class PropiedadInmuebleData {
 
     ///Precio base fin
     //-----------------------------------------------------
+    //Listar segun el criterio de cada items inicio
+    public List<inmobiliaria23.entidades.PropiedadInmueble> listarInmueblesPorCriteriosCompleto(String tipo, String zona, int superficie, float precioMin, float precioMax) {
+        String sql = "SELECT * FROM inmueble WHERE Tipo = ? AND Zona = ? AND Superficie = ? AND PrecioBase BETWEEN ? AND ? ORDER BY PrecioBase ASC";
+        List<inmobiliaria23.entidades.PropiedadInmueble> propiedadesEncontradas = new ArrayList<>();
+
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, tipo);
+            ps.setString(2, zona);
+            ps.setInt(3, superficie);
+            ps.setFloat(4, precioMin);
+            ps.setFloat(5, precioMax);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                inmobiliaria23.entidades.PropiedadInmueble propiedad = new inmobiliaria23.entidades.PropiedadInmueble();
+                propiedad.setIdInmueble(rs.getInt("idInmueble"));
+                propiedad.setTipoDeLocal(rs.getString("Tipo"));
+                propiedad.setZona(rs.getString("Zona"));
+                propiedad.setDireccion(rs.getString("Direccion"));
+                propiedad.setSuperficie(rs.getInt("Superficie"));
+                propiedad.setCaracteristicas(rs.getString("Caracteristicas"));
+                propiedad.setAccesibilidad(rs.getString("Accesibilidad"));
+                propiedad.setPrecioTasado(rs.getFloat("PrecioBase"));
+                propiedad.setEstado(rs.getBoolean("Estado"));
+                propiedadesEncontradas.add(propiedad);
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla inmueble: " + ex.getMessage());
+        }
+        return propiedadesEncontradas;
+    }
+
+    //Listar segun el criterio de cada items fin
+    //-----------------------------------------------
     public List<inmobiliaria23.entidades.PropiedadInmueble> listarInmuebles() {//lista de las propiedades 
         String sql = "SELECT* FROM inmueble";
         //ArrayList<PropiedadInmueble> PropiedadInmueble = new ArrayList<>();

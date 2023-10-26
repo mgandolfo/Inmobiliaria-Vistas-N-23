@@ -93,7 +93,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
       <SubComponents>
-        <Component class="inmobiliaria23.entidades.BotonAzul" name="botonAzul1">
+        <Component class="inmobiliaria23.entidades.BotonAzul" name="si">
           <Properties>
             <Property name="text" type="java.lang.String" value="SI"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -104,10 +104,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAzul1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="siActionPerformed"/>
           </Events>
         </Component>
-        <Component class="inmobiliaria23.entidades.BotonRojo" name="botonRojo1">
+        <Component class="inmobiliaria23.entidades.BotonRojo" name="no">
           <Properties>
             <Property name="text" type="java.lang.String" value="NO"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -119,7 +119,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRojo1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="noActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -132,7 +132,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xbf;Est&#xe1;s seguro que deseas salir?"/>
+        <Property name="text" type="java.lang.String" value="&#xbf;Est&#xe1;s seguro que deseas Salir?"/>
       </Properties>
     </Component>
   </SubComponents>
