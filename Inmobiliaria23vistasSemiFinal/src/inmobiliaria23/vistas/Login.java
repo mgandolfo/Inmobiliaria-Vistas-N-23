@@ -5,11 +5,21 @@
  */
 package inmobiliaria23.vistas;
 
+import inmobiliaria23.accesoaDatos.conexion;
+import static inmobiliaria23.accesoaDatos.conexion.conectar;
+import inmobiliaria23.accesoaDatos.usuarioData;
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,6 +31,7 @@ public class Login extends javax.swing.JFrame {
 
     public Login() {
         initComponents();
+
         this.setLocationRelativeTo(null);
         this.setSize(846, 550);
 
@@ -287,14 +298,17 @@ public class Login extends javax.swing.JFrame {
 
         String convertirPass = String.valueOf(passTxt.getPassword());
         if (userTxt.getText().equals(Usuario) && convertirPass.equals(Password)) {
-
-            MenuView principal = new MenuView();
+            String mensaje = "Bienvenidos a nuestra aplicación: " + userTxt.getText();
+            mensajeSaludos ms = new mensajeSaludos(null, true);
+            ms.textoMensaje(mensaje);
+            ms.setVisible(true);
+            /*MenuView principal = new MenuView();
             principal.setUsuarios(userTxt.getText());
-            principal.setVisible(true);
+            principal.setVisible(true);*/
             dispose();
 
         } else {
-            String mensaje = "Usuario y contraseña incorrecta";
+            String mensaje = "Usuario y contraseña incorrecto";
             MensajeEmergentesAdvertencias me = new MensajeEmergentesAdvertencias(this, true);
             me.TextoMensaje(mensaje);
             me.setVisible(true);
@@ -302,6 +316,7 @@ public class Login extends javax.swing.JFrame {
             passTxt.setText("");
 
         }
+
 
     }//GEN-LAST:event_botonAzul1ActionPerformed
 
@@ -334,6 +349,12 @@ public class Login extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

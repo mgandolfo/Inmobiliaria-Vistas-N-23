@@ -9,13 +9,13 @@ package inmobiliaria23.vistas;
  *
  * @author mgandolfo
  */
-public class mensajeCorrecto extends javax.swing.JDialog {
+public class mensajeSaludos extends javax.swing.JDialog {
 
-    public mensajeCorrecto(java.awt.Frame parent, boolean modal) {
+    public mensajeSaludos(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(parent);
-        this.setSize(400, 240);
+        this.setSize(400, 280);
 
     }
 
@@ -35,8 +35,9 @@ public class mensajeCorrecto extends javax.swing.JDialog {
 
         jPanel1.setOpaque(false);
 
+        jLabel1.setBackground(new java.awt.Color(9, 153, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/correcto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inmobiliaria23/recursos/saludos.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,21 +151,23 @@ public class mensajeCorrecto extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mensajeCorrecto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mensajeSaludos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mensajeCorrecto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mensajeSaludos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mensajeCorrecto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mensajeSaludos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mensajeCorrecto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mensajeSaludos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                mensajeCorrecto dialog = new mensajeCorrecto(new javax.swing.JFrame(), true);
+                mensajeSaludos dialog = new mensajeSaludos(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
